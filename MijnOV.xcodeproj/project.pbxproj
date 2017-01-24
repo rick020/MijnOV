@@ -7,23 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		259CF39A1E37AF14003F6EF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259CF3991E37AF14003F6EF6 /* AppDelegate.swift */; };
-		259CF39C1E37AF14003F6EF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259CF39B1E37AF14003F6EF6 /* ViewController.swift */; };
-		259CF39F1E37AF14003F6EF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 259CF39D1E37AF14003F6EF6 /* Main.storyboard */; };
-		259CF3A21E37AF14003F6EF6 /* MijnOV.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 259CF3A01E37AF14003F6EF6 /* MijnOV.xcdatamodeld */; };
-		259CF3A41E37AF14003F6EF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 259CF3A31E37AF14003F6EF6 /* Assets.xcassets */; };
 		259CF3A71E37AF14003F6EF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 259CF3A51E37AF14003F6EF6 /* LaunchScreen.storyboard */; };
+		259CF3BB1E37AF38003F6EF6 /* CoreLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259CF3AE1E37AF38003F6EF6 /* CoreLocation.swift */; };
+		259CF3BC1E37AF38003F6EF6 /* Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259CF3AF1E37AF38003F6EF6 /* Directions.swift */; };
+		259CF3BD1E37AF38003F6EF6 /* SavedDirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259CF3B01E37AF38003F6EF6 /* SavedDirectionsViewController.swift */; };
+		259CF3BE1E37AF38003F6EF6 /* RegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259CF3B11E37AF38003F6EF6 /* RegionViewController.swift */; };
+		259CF3BF1E37AF38003F6EF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 259CF3B21E37AF38003F6EF6 /* Assets.xcassets */; };
+		259CF3C01E37AF38003F6EF6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 259CF3B31E37AF38003F6EF6 /* Info.plist */; };
+		259CF3C21E37AF38003F6EF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259CF3B51E37AF38003F6EF6 /* AppDelegate.swift */; };
+		259CF3C31E37AF38003F6EF6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259CF3B61E37AF38003F6EF6 /* SearchViewController.swift */; };
+		259CF3C41E37AF38003F6EF6 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259CF3B71E37AF38003F6EF6 /* Utilities.swift */; };
+		259CF3C51E37AF38003F6EF6 /* DestinationModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 259CF3B81E37AF38003F6EF6 /* DestinationModel.xcdatamodeld */; };
+		259CF3C61E37AF38003F6EF6 /* TransitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259CF3BA1E37AF38003F6EF6 /* TransitTableViewCell.swift */; };
+		259CF3C81E37AF55003F6EF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 259CF3C71E37AF55003F6EF6 /* Main.storyboard */; };
+		259CF3CD1E37B227003F6EF6 /* PROCESS.md in Sources */ = {isa = PBXBuildFile; fileRef = 259CF3C91E37B227003F6EF6 /* PROCESS.md */; };
+		259CF3CE1E37B227003F6EF6 /* doc in Resources */ = {isa = PBXBuildFile; fileRef = 259CF3CA1E37B227003F6EF6 /* doc */; };
+		259CF3CF1E37B227003F6EF6 /* DESIGN.md in Sources */ = {isa = PBXBuildFile; fileRef = 259CF3CB1E37B227003F6EF6 /* DESIGN.md */; };
+		259CF3D01E37B227003F6EF6 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 259CF3CC1E37B227003F6EF6 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		259CF3961E37AF14003F6EF6 /* MijnOV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MijnOV.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		259CF3991E37AF14003F6EF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		259CF39B1E37AF14003F6EF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		259CF39E1E37AF14003F6EF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		259CF3A11E37AF14003F6EF6 /* MijnOV.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MijnOV.xcdatamodel; sourceTree = "<group>"; };
-		259CF3A31E37AF14003F6EF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		259CF3A61E37AF14003F6EF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		259CF3A81E37AF14003F6EF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		259CF3AE1E37AF38003F6EF6 /* CoreLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreLocation.swift; path = ../CoreLocation.swift; sourceTree = "<group>"; };
+		259CF3AF1E37AF38003F6EF6 /* Directions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Directions.swift; path = ../Directions.swift; sourceTree = "<group>"; };
+		259CF3B01E37AF38003F6EF6 /* SavedDirectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SavedDirectionsViewController.swift; path = ../SavedDirectionsViewController.swift; sourceTree = "<group>"; };
+		259CF3B11E37AF38003F6EF6 /* RegionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegionViewController.swift; path = ../RegionViewController.swift; sourceTree = "<group>"; };
+		259CF3B21E37AF38003F6EF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		259CF3B31E37AF38003F6EF6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		259CF3B51E37AF38003F6EF6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		259CF3B61E37AF38003F6EF6 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = ../SearchViewController.swift; sourceTree = "<group>"; };
+		259CF3B71E37AF38003F6EF6 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = ../Utilities.swift; sourceTree = "<group>"; };
+		259CF3B91E37AF38003F6EF6 /* DestinationModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DestinationModel.xcdatamodel; sourceTree = "<group>"; };
+		259CF3BA1E37AF38003F6EF6 /* TransitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransitTableViewCell.swift; path = ../TransitTableViewCell.swift; sourceTree = "<group>"; };
+		259CF3C71E37AF55003F6EF6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		259CF3C91E37B227003F6EF6 /* PROCESS.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = PROCESS.md; sourceTree = "<group>"; };
+		259CF3CA1E37B227003F6EF6 /* doc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = doc; sourceTree = "<group>"; };
+		259CF3CB1E37B227003F6EF6 /* DESIGN.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = DESIGN.md; sourceTree = "<group>"; };
+		259CF3CC1E37B227003F6EF6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +61,11 @@
 		259CF38D1E37AF14003F6EF6 = {
 			isa = PBXGroup;
 			children = (
+				259CF3C91E37B227003F6EF6 /* PROCESS.md */,
+				259CF3CA1E37B227003F6EF6 /* doc */,
+				259CF3CB1E37B227003F6EF6 /* DESIGN.md */,
+				259CF3CC1E37B227003F6EF6 /* README.md */,
+				259CF3B51E37AF38003F6EF6 /* AppDelegate.swift */,
 				259CF3981E37AF14003F6EF6 /* MijnOV */,
 				259CF3971E37AF14003F6EF6 /* Products */,
 			);
@@ -56,15 +82,52 @@
 		259CF3981E37AF14003F6EF6 /* MijnOV */ = {
 			isa = PBXGroup;
 			children = (
-				259CF3991E37AF14003F6EF6 /* AppDelegate.swift */,
-				259CF39B1E37AF14003F6EF6 /* ViewController.swift */,
-				259CF39D1E37AF14003F6EF6 /* Main.storyboard */,
-				259CF3A31E37AF14003F6EF6 /* Assets.xcassets */,
-				259CF3A51E37AF14003F6EF6 /* LaunchScreen.storyboard */,
-				259CF3A81E37AF14003F6EF6 /* Info.plist */,
-				259CF3A01E37AF14003F6EF6 /* MijnOV.xcdatamodeld */,
+				259CF3D21E37F22D003F6EF6 /* Model */,
+				259CF3D11E37F213003F6EF6 /* Controllers */,
+				259CF3B31E37AF38003F6EF6 /* Info.plist */,
+				259CF3D31E37F255003F6EF6 /* View */,
+				259CF3D41E37F260003F6EF6 /* Layout */,
+				259CF3B21E37AF38003F6EF6 /* Assets.xcassets */,
 			);
 			path = MijnOV;
+			sourceTree = "<group>";
+		};
+		259CF3D11E37F213003F6EF6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				259CF3B01E37AF38003F6EF6 /* SavedDirectionsViewController.swift */,
+				259CF3B11E37AF38003F6EF6 /* RegionViewController.swift */,
+				259CF3B61E37AF38003F6EF6 /* SearchViewController.swift */,
+				259CF3B71E37AF38003F6EF6 /* Utilities.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		259CF3D21E37F22D003F6EF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				259CF3B81E37AF38003F6EF6 /* DestinationModel.xcdatamodeld */,
+				259CF3AE1E37AF38003F6EF6 /* CoreLocation.swift */,
+				259CF3AF1E37AF38003F6EF6 /* Directions.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		259CF3D31E37F255003F6EF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				259CF3BA1E37AF38003F6EF6 /* TransitTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		259CF3D41E37F260003F6EF6 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				259CF3C71E37AF55003F6EF6 /* Main.storyboard */,
+				259CF3A51E37AF14003F6EF6 /* LaunchScreen.storyboard */,
+			);
+			name = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +162,7 @@
 				TargetAttributes = {
 					259CF3951E37AF14003F6EF6 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = YUE3R87RP8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -126,9 +190,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				259CF3CE1E37B227003F6EF6 /* doc in Resources */,
+				259CF3C81E37AF55003F6EF6 /* Main.storyboard in Resources */,
 				259CF3A71E37AF14003F6EF6 /* LaunchScreen.storyboard in Resources */,
-				259CF3A41E37AF14003F6EF6 /* Assets.xcassets in Resources */,
-				259CF39F1E37AF14003F6EF6 /* Main.storyboard in Resources */,
+				259CF3BF1E37AF38003F6EF6 /* Assets.xcassets in Resources */,
+				259CF3C01E37AF38003F6EF6 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,23 +205,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				259CF39C1E37AF14003F6EF6 /* ViewController.swift in Sources */,
-				259CF39A1E37AF14003F6EF6 /* AppDelegate.swift in Sources */,
-				259CF3A21E37AF14003F6EF6 /* MijnOV.xcdatamodeld in Sources */,
+				259CF3C21E37AF38003F6EF6 /* AppDelegate.swift in Sources */,
+				259CF3BD1E37AF38003F6EF6 /* SavedDirectionsViewController.swift in Sources */,
+				259CF3C31E37AF38003F6EF6 /* SearchViewController.swift in Sources */,
+				259CF3BE1E37AF38003F6EF6 /* RegionViewController.swift in Sources */,
+				259CF3C61E37AF38003F6EF6 /* TransitTableViewCell.swift in Sources */,
+				259CF3CF1E37B227003F6EF6 /* DESIGN.md in Sources */,
+				259CF3D01E37B227003F6EF6 /* README.md in Sources */,
+				259CF3C51E37AF38003F6EF6 /* DestinationModel.xcdatamodeld in Sources */,
+				259CF3CD1E37B227003F6EF6 /* PROCESS.md in Sources */,
+				259CF3BB1E37AF38003F6EF6 /* CoreLocation.swift in Sources */,
+				259CF3C41E37AF38003F6EF6 /* Utilities.swift in Sources */,
+				259CF3BC1E37AF38003F6EF6 /* Directions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		259CF39D1E37AF14003F6EF6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				259CF39E1E37AF14003F6EF6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		259CF3A51E37AF14003F6EF6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -264,6 +331,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YUE3R87RP8;
 				INFOPLIST_FILE = MijnOV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.mprog.rickbruins.MijnOV;
@@ -276,6 +344,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YUE3R87RP8;
 				INFOPLIST_FILE = MijnOV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.mprog.rickbruins.MijnOV;
@@ -303,17 +372,19 @@
 				259CF3AD1E37AF14003F6EF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		259CF3A01E37AF14003F6EF6 /* MijnOV.xcdatamodeld */ = {
+		259CF3B81E37AF38003F6EF6 /* DestinationModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				259CF3A11E37AF14003F6EF6 /* MijnOV.xcdatamodel */,
+				259CF3B91E37AF38003F6EF6 /* DestinationModel.xcdatamodel */,
 			);
-			currentVersion = 259CF3A11E37AF14003F6EF6 /* MijnOV.xcdatamodel */;
-			path = MijnOV.xcdatamodeld;
+			currentVersion = 259CF3B91E37AF38003F6EF6 /* DestinationModel.xcdatamodel */;
+			name = DestinationModel.xcdatamodeld;
+			path = ../DestinationModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
