@@ -15,15 +15,14 @@ class RegionViewController: UIViewController,MKMapViewDelegate, CLLocationManage
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
     var directionObject: Directions?
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
         locationManager.distanceFilter = kCLLocationAccuracyNearestTenMeters
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        
+        locationManager.startUpdatingLocation()
+
         mapView.delegate = self
         mapView.showsUserLocation = true
         mapView.userTrackingMode = .follow
@@ -56,8 +55,7 @@ class RegionViewController: UIViewController,MKMapViewDelegate, CLLocationManage
                     let coordinate = CLLocationCoordinate2DMake((directionObject?.coordinates[0])!,(directionObject?.coordinates[1])!)
                     let regionRadius = 100.0
                 
-                    let region = CLCircularRegion(center: CLLocationCoordinate2D(latitude: coordinate.latitude,
-                                                                             longitude: coordinate.longitude), radius: regionRadius, identifier: (directionObject?.getDepartureTime())! )
+                    let region = CLCircularRegion(center: CLLocationCoordinate2D(latitude: coordinate.latitude,longitude: coordinate.longitude), radius: regionRadius, identifier: (directionObject?.getDepartureTime())! )
                     locationManager.startMonitoring(for: region)
                     let departureAnnotation = MKPointAnnotation()
                     departureAnnotation.coordinate = coordinate;

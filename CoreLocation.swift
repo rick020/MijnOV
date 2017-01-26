@@ -19,8 +19,7 @@ class CoreLocation : NSObject, CLLocationManagerDelegate {
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestAlwaysAuthorization()
-        self.locationManager.startUpdatingLocation()
-        //        self.locationManager.requestLocation()
+        self.locationManager.requestLocation()
     }
     
     func locationManager(_ manager: CLLocationManager,didUpdateLocations locations: [CLLocation])

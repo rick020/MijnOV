@@ -8,34 +8,23 @@
 
 import UIKit
 import CoreData
+import GooglePlaces
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController,UITextFieldDelegate {
     
     var userLocation = String()
     var transitDB: [NSManagedObject] = []
+    let autocompleteController = GMSAutocompleteViewController()
 
-    @IBOutlet weak var startLocationField: UITextField!
-    @IBOutlet weak var destinationField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
-    }
-
-    @IBAction func getCurrentLocation(_ sender: Any) {
-        startLocationField.text = userLocation
-    }
-    
-    @IBAction func saveRoute(_ sender: Any) {
-        guard let start = startLocationField.text, !start.isEmpty else {
-            alert(title: "Error", message: "start location empty field")
-            return
-        }
-        guard let destination = destinationField.text,!destination.isEmpty else {
-            alert(title: "Error", message: "end location is empty")
-            return
-        }
+        autocompleteController.delegate = self
+        present(autocompleteController, animated: false, completion: nil)
         
+    }
+        
+    func saveInCoreData(destination: String) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
         let managedContext = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "Destination", in: managedContext)!
@@ -49,7 +38,37 @@ class SearchViewController: UIViewController {
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
-
-        
     }
+}
+
+extension SearchViewController: GMSAutocompleteViewControllerDelegate {
+    
+    // Handle the user's selection.
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        self.saveInCoreData(destination: place.formattedAddress!)
+        dismiss(animated: false, completion: nil)
+        _ = navigationController?.popViewController(animated: false)
+    }
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        // TODO: handle the error.
+        print("Error: ", error.localizedDescription)
+    }
+    
+    // User canceled the operation.
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        dismiss(animated: false, completion: nil)
+        _ = navigationController?.popViewController(animated: false)
+
+    }
+    
+    // Turn the network activity indicator on and off again.
+    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
+    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+    
 }

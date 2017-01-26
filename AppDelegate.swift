@@ -9,19 +9,18 @@
 import UIKit
 import CoreData
 import CoreLocation
+import GooglePlaces
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var coreLocation: CoreLocation?
-
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:
         [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        self.coreLocation = CoreLocation()
-        
+                
         // Customize header colors.
         let navigationBarAppearace = UINavigationBar.appearance()
         navigationBarAppearace.barTintColor = UIColor(rgb: 0xF7A929)
@@ -32,6 +31,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Change navigation item title color.
         navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        
+        GMSPlacesClient.provideAPIKey("AIzaSyBxT6mhVJwxrUi6wKcfKr9nhTN5Kl7_X5A")
+
         
         return true
     }

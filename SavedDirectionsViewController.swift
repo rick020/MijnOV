@@ -16,9 +16,11 @@ class SavedDirectionsViewController: UIViewController, UITableViewDelegate, UITa
     var list: [Directions] = []
     var userInfo = String()
     var transitDB: [NSManagedObject] = []
-
+    var coreLocation: CoreLocation?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        coreLocation = CoreLocation()
         fetchTransit()
         NotificationCenter.default.addObserver(self, selector: #selector(self.locationAvailable(notification:)), name: Notification.Name("LocationAvailable"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.handleTransitDetails(notification:)), name: Notification.Name("TransitDetailsAvailable"), object: nil)
@@ -34,7 +36,11 @@ class SavedDirectionsViewController: UIViewController, UITableViewDelegate, UITa
         }
     }
     @objc private func refreshOptions(sender: UIRefreshControl) {
-        createDirections()
+        coreLocation = CoreLocation()
+
+        if userInfo != ""{
+            createDirections()
+        }
         sender.endRefreshing()
     }
     
@@ -73,6 +79,7 @@ class SavedDirectionsViewController: UIViewController, UITableViewDelegate, UITa
         
         do {
             transitDB = try context.fetch(fetchRequest)
+
         } catch let error as NSError {
             let errorDialog = UIAlertController(title: "Error!", message: "Failed to save! \(error): \(error.userInfo)", preferredStyle: .alert)
             errorDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))

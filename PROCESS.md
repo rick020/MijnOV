@@ -49,3 +49,10 @@ Route opslaan met Core Date en weergeven in tabel.
 # Dag 24/1
 
 * Vandaag heb ik het voor elkaar gekregen om een werkend Geofence te maken. Echter werkt deze nog niet op de achtergrond. 
+
+# Dag 25/1
+
+* Vandaag tot de conclusie gekomen dat ik het geofence niet meer volledig kan implementeren. Dit houdt in dat de app geen notificatie kan geven wanneer de app op de achtergrond runt. De reden waarom dit niet meer gaat lukken is dat ik de hele code zou moeten herschrijven om het te laten werken. De structuur zou helemaal aangepast moeten worden. Daardoor heb ik besloten om nog kleine features toe te voegen. Ik ben nu bezig de Auto Complete API van Google. Deze wordt geïmplementeerd in zoekscherm.
+
+# Dag 26/1
+* Het is gelukt om de Auto Complete te implementeren.
