@@ -10,7 +10,7 @@ De applicatie bestaat uit drie viewcontrollers:
 
 ### SavedDirectionViewContoller
 
-In deze viewcontroller staat de tabel die opgeslagen reizen weergeeft. De tabel bestaat uit een lijst met Directions objecten. Deze objecten bevatten reisdetails van de opgeslagen reizen. De objecten worden aangemaakt met behulp van de [Directions API](#directions-api) en [Core Location](#core-location) bij het uitlezen van [Core Data](#core-data).
+In deze viewcontroller staat de tabel die opgeslagen reizen weergeeft. De tabel bestaat uit een lijst met Directions objecten. Deze objecten bevatten reisdetails van de opgeslagen reizen. De objecten worden aangemaakt met behulp van de [Google Directions API](#google-directions-api) en [Core Location](#core-location) bij het uitlezen van [Core Data](#core-data).
 
 #### Google Directions API
 Op basis van de opgegeven startlocatie, eindbestemming, manier van reizen en api key wordt een http verzoek verstuurd naar de Google Directions API. 
