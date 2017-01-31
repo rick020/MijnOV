@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Wcp-9f-u6r">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,18 +19,18 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="156" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KCQ-ie-leb">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomCell" rowHeight="156" id="Cqc-xh-h2Y" customClass="TransitTableViewCell" customModule="MijnOV" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="156"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cqc-xh-h2Y" id="ffA-uC-USH">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="155.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="155"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Halte" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPX-lk-KIn">
@@ -162,7 +162,7 @@
                         <viewControllerLayoutGuide type="bottom" id="j1F-qJ-vdG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ixD-ce-V76">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -181,15 +181,20 @@
                         <viewControllerLayoutGuide type="bottom" id="pNM-bN-KMy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cQX-Xi-Ft0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lmO-SF-lQN">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lmO-SF-lQN">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lmO-SF-lQN" secondAttribute="trailing" id="GyX-LJ-Fri"/>
+                            <constraint firstItem="lmO-SF-lQN" firstAttribute="leading" secondItem="cQX-Xi-Ft0" secondAttribute="leading" id="IGi-EN-2Ma"/>
+                            <constraint firstItem="lmO-SF-lQN" firstAttribute="bottom" secondItem="pNM-bN-KMy" secondAttribute="top" id="LBV-ch-LFd"/>
+                            <constraint firstItem="lmO-SF-lQN" firstAttribute="top" secondItem="Fo8-NT-Z5F" secondAttribute="bottom" id="ogb-v2-Gz7"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="lmO-SF-lQN" id="1k0-Vz-Z7M"/>
@@ -197,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ykn-iS-mFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1899" y="500"/>
+            <point key="canvasLocation" x="1898.5507246376812" y="499.72826086956525"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YW7-Kt-cQm">

@@ -30,7 +30,6 @@ class Directions {
         let webUrl = URL(string: "https://maps.googleapis.com/maps/api/directions/json?origin=\(self.starting_point)&destination=\(self.destination)&mode=transit&key=\(key)")!
         var request = URLRequest(url: webUrl)
         request.httpMethod = "POST"
-
         return request
     }
     

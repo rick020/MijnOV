@@ -18,12 +18,13 @@ class CoreLocation : NSObject, CLLocationManagerDelegate {
         super.init()
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.requestAlwaysAuthorization()
         self.locationManager.requestLocation()
+        print("init")
     }
     
     func locationManager(_ manager: CLLocationManager,didUpdateLocations locations: [CLLocation])
     {
+        print("geocoder")
         if let location: CLLocation = locations.first {
             let geocoder = CLGeocoder()
             geocoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, e) -> Void in
@@ -37,6 +38,7 @@ class CoreLocation : NSObject, CLLocationManagerDelegate {
             })
         }
     }
+
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Failed to find user's location: \(error.localizedDescription)")
     }

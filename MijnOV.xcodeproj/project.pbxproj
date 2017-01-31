@@ -119,8 +119,8 @@
 		259CF3D11E37F213003F6EF6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				259CF3B01E37AF38003F6EF6 /* SavedDirectionsViewController.swift */,
 				259CF3B11E37AF38003F6EF6 /* RegionViewController.swift */,
+				259CF3B01E37AF38003F6EF6 /* SavedDirectionsViewController.swift */,
 				259CF3B61E37AF38003F6EF6 /* SearchViewController.swift */,
 				259CF3B71E37AF38003F6EF6 /* Utilities.swift */,
 			);

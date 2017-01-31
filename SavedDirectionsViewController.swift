@@ -20,17 +20,17 @@ class SavedDirectionsViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.handleTransitDetails(notification:)), name: Notification.Name("TransitDetailsAvailable"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.locationAvailable(notification:)), name: Notification.Name("LocationAvailable"), object: nil)
         fetchTransit()
         coreLocation = CoreLocation()
-        receiveLocationNotification()
         checkRefresh()
+        
     }
-    
     @objc private func refreshOptions(sender: UIRefreshControl) {
         coreLocation = CoreLocation()
         if userInfo != ""{
             fetchTransit()
-            receiveLocationNotification()
         }
         sender.endRefreshing()
     }
@@ -41,28 +41,22 @@ class SavedDirectionsViewController: UIViewController, UITableViewDelegate, UITa
             var destination = trans.value(forKey: "name") as! String
             destination = destination.replacingOccurrences(of: " ", with: "+")
             let myDirection = Directions(starting_point: self.userInfo, destination:destination)
-            NotificationCenter.default.addObserver(self, selector: #selector(self.handleTransitDetails(notification:)), name: Notification.Name("TransitDetailsAvailable"), object: nil)
+            
             list.append(myDirection)
         }
         tableView.reloadData()
     }
     
     func handleTransitDetails(notification: Notification) {
+        print("transit details handled")
         tableView.reloadData()
     }
     
     func locationAvailable(notification: Notification) {
+        print("location available")
         self.userInfo = notification.object as! String
         title = self.userInfo
         createDirections()
-    }
-    
-    func receiveLocationNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.locationAvailable(notification:)), name: Notification.Name("LocationAvailable"), object: nil)
-    }
-    
-    func reveiveTransitDetailsNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.handleTransitDetails(notification:)), name: Notification.Name("TransitDetailsAvailable"), object: nil)
     }
     
     func checkRefresh() {

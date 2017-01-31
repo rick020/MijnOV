@@ -29,7 +29,7 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         let managedContext = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "Destination", in: managedContext)!
         let transit = NSManagedObject(entity: entity, insertInto: managedContext)
-
+    
         transit.setValue(destination, forKeyPath: "name")
         
         do {
@@ -52,11 +52,9 @@ extension SearchViewController: GMSAutocompleteViewControllerDelegate {
     }
     
     func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
-        // TODO: handle the error.
         print("Error: ", error.localizedDescription)
     }
     
-    // User canceled the operation.
     func wasCancelled(_ viewController: GMSAutocompleteViewController) {
         dismiss(animated: false, completion: nil)
         _ = navigationController?.popViewController(animated: false)

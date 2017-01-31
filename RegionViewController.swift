@@ -21,8 +21,7 @@ class RegionViewController: UIViewController,MKMapViewDelegate, CLLocationManage
         locationManager.delegate = self
         locationManager.distanceFilter = kCLLocationAccuracyNearestTenMeters
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.startUpdatingLocation()
-
+        
         mapView.delegate = self
         mapView.showsUserLocation = true
         mapView.userTrackingMode = .follow
@@ -49,22 +48,22 @@ class RegionViewController: UIViewController,MKMapViewDelegate, CLLocationManage
     func setupData() {
         if CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) {
 
-            if directionObject != nil {
-                title = directionObject?.getDepartureStop()
-                if (directionObject?.coordinates.count)! > 0 {
-                    let coordinate = CLLocationCoordinate2DMake((directionObject?.coordinates[0])!,(directionObject?.coordinates[1])!)
-                    let regionRadius = 100.0
+            if directionObject != nil && (directionObject!.coordinates.count) > 0{
+                title = directionObject!.getDepartureStop()
                 
-                    let region = CLCircularRegion(center: CLLocationCoordinate2D(latitude: coordinate.latitude,longitude: coordinate.longitude), radius: regionRadius, identifier: (directionObject?.getDepartureTime())! )
-                    locationManager.startMonitoring(for: region)
-                    let departureAnnotation = MKPointAnnotation()
-                    departureAnnotation.coordinate = coordinate;
-                    departureAnnotation.title = "\(title!)";
-                    mapView.addAnnotation(departureAnnotation)
-                    
-                    let circle = MKCircle(center: coordinate, radius: regionRadius)
-                    mapView.add(circle)
-                }
+                let coordinate = CLLocationCoordinate2DMake((directionObject?.coordinates[0])!,(directionObject?.coordinates[1])!)
+                let regionRadius = 100.0
+                let region = CLCircularRegion(center: CLLocationCoordinate2D(latitude: coordinate.latitude,longitude: coordinate.longitude), radius: regionRadius, identifier: (directionObject?.getDepartureTime())! )
+                
+                locationManager.startMonitoring(for: region)
+                let departureAnnotation = MKPointAnnotation()
+                departureAnnotation.coordinate = coordinate;
+                departureAnnotation.title = title!
+                departureAnnotation.subtitle = directionObject!.getDepartureTime() + " " + directionObject!.getVehicleType() + " " + directionObject!.getShortName() + " " + directionObject!.getHeadSign()
+
+                mapView.addAnnotation(departureAnnotation)
+                let circle = MKCircle(center: coordinate, radius: regionRadius)
+                mapView.add(circle)
             }
         }
         else {
@@ -74,13 +73,14 @@ class RegionViewController: UIViewController,MKMapViewDelegate, CLLocationManage
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let circleRenderer = MKCircleRenderer(overlay: overlay)
-        circleRenderer.strokeColor = UIColor.red
+        circleRenderer.strokeColor = UIColor.orange
+        circleRenderer.fillColor = UIColor.orange.withAlphaComponent(0.4)
         circleRenderer.lineWidth = 1.0
         return circleRenderer
     }
     
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        alert(title: "Enter", message: (region.identifier))
+        alert(title: "Enter", message: directionObject!.getDepartureTime() + " " + directionObject!.getVehicleType() + " " + directionObject!.getShortName() + " " + directionObject!.getHeadSign())
         
     }
 }
