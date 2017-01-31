@@ -64,7 +64,7 @@ class RegionViewController: UIViewController,MKMapViewDelegate, CLLocationManage
                     
                     let circle = MKCircle(center: coordinate, radius: regionRadius)
                     mapView.add(circle)
-            }
+                }
             }
         }
         else {

@@ -70,7 +70,7 @@ class Directions {
                                 self.coordinates.append(lng)
                                 
                                 self.directionDetails["departureTime"] = transit_details["departure_time"]?.value(forKey: "text") as? String
-                                NotificationCenter.default.post(name: Notification.Name("TransitDetailsAvailable"), object: self.directionDetails)
+                                NotificationCenter.default.post(name: Notification.Name("TransitDetailsAvailable"), object: nil)
                             }
                             
                             break

@@ -29,6 +29,7 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         let managedContext = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "Destination", in: managedContext)!
         let transit = NSManagedObject(entity: entity, insertInto: managedContext)
+
         transit.setValue(destination, forKeyPath: "name")
         
         do {

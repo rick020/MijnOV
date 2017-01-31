@@ -24,6 +24,7 @@
 		259CF3CE1E37B227003F6EF6 /* doc in Resources */ = {isa = PBXBuildFile; fileRef = 259CF3CA1E37B227003F6EF6 /* doc */; };
 		259CF3CF1E37B227003F6EF6 /* DESIGN.md in Sources */ = {isa = PBXBuildFile; fileRef = 259CF3CB1E37B227003F6EF6 /* DESIGN.md */; };
 		259CF3D01E37B227003F6EF6 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 259CF3CC1E37B227003F6EF6 /* README.md */; };
+		25C5D6911E40CF1300AB9EA2 /* REPORT.md in Sources */ = {isa = PBXBuildFile; fileRef = 25C5D6901E40CF1300AB9EA2 /* REPORT.md */; };
 		B0DFA4D3EE0695001E19A739 /* libPods-MijnOV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43877A95EF8D55DEF9394E2E /* libPods-MijnOV.a */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		259CF3CA1E37B227003F6EF6 /* doc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = doc; sourceTree = "<group>"; };
 		259CF3CB1E37B227003F6EF6 /* DESIGN.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = DESIGN.md; sourceTree = "<group>"; };
 		259CF3CC1E37B227003F6EF6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		25C5D6901E40CF1300AB9EA2 /* REPORT.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = REPORT.md; sourceTree = "<group>"; };
 		337C9B3D3EAD2DDFFB4649CC /* Pods-MijnOV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MijnOV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MijnOV/Pods-MijnOV.debug.xcconfig"; sourceTree = "<group>"; };
 		43877A95EF8D55DEF9394E2E /* libPods-MijnOV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MijnOV.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F36ECA2AAECA1E9CBBD6AAF6 /* Pods-MijnOV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MijnOV.release.xcconfig"; path = "Pods/Target Support Files/Pods-MijnOV/Pods-MijnOV.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				259CF3C91E37B227003F6EF6 /* PROCESS.md */,
+				25C5D6901E40CF1300AB9EA2 /* REPORT.md */,
 				259CF3CA1E37B227003F6EF6 /* doc */,
 				259CF3CB1E37B227003F6EF6 /* DESIGN.md */,
 				259CF3CC1E37B227003F6EF6 /* README.md */,
@@ -307,6 +310,7 @@
 				259CF3CD1E37B227003F6EF6 /* PROCESS.md in Sources */,
 				259CF3BB1E37AF38003F6EF6 /* CoreLocation.swift in Sources */,
 				259CF3C41E37AF38003F6EF6 /* Utilities.swift in Sources */,
+				25C5D6911E40CF1300AB9EA2 /* REPORT.md in Sources */,
 				259CF3BC1E37AF38003F6EF6 /* Directions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

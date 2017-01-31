@@ -20,44 +20,28 @@ class SavedDirectionsViewController: UIViewController, UITableViewDelegate, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        coreLocation = CoreLocation()
         fetchTransit()
-        NotificationCenter.default.addObserver(self, selector: #selector(self.locationAvailable(notification:)), name: Notification.Name("LocationAvailable"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.handleTransitDetails(notification:)), name: Notification.Name("TransitDetailsAvailable"), object: nil)
-        
-        if #available(iOS 10.0, *) {
-            let refreshControl = UIRefreshControl()
-            let title = NSLocalizedString("PullToRefresh", comment: "Pull to refresh")
-            refreshControl.attributedTitle = NSAttributedString(string: title)
-            refreshControl.addTarget(self,
-                                     action: #selector(refreshOptions(sender:)),
-                                     for: .valueChanged)
-            tableView.refreshControl = refreshControl
-        }
+        coreLocation = CoreLocation()
+        receiveLocationNotification()
+        checkRefresh()
     }
+    
     @objc private func refreshOptions(sender: UIRefreshControl) {
         coreLocation = CoreLocation()
-
         if userInfo != ""{
-            createDirections()
+            fetchTransit()
+            receiveLocationNotification()
         }
         sender.endRefreshing()
     }
-    
-    // Fetch core data before view did load
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        fetchTransit()
-    }
-
-    
     // Create array of directions objects
     func createDirections() {
         list = []
         for trans in transitDB as [NSManagedObject] {
             var destination = trans.value(forKey: "name") as! String
             destination = destination.replacingOccurrences(of: " ", with: "+")
-            let myDirection = Directions(starting_point: self.userInfo, destination:destination )
+            let myDirection = Directions(starting_point: self.userInfo, destination:destination)
+            NotificationCenter.default.addObserver(self, selector: #selector(self.handleTransitDetails(notification:)), name: Notification.Name("TransitDetailsAvailable"), object: nil)
             list.append(myDirection)
         }
         tableView.reloadData()
@@ -71,6 +55,26 @@ class SavedDirectionsViewController: UIViewController, UITableViewDelegate, UITa
         self.userInfo = notification.object as! String
         title = self.userInfo
         createDirections()
+    }
+    
+    func receiveLocationNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.locationAvailable(notification:)), name: Notification.Name("LocationAvailable"), object: nil)
+    }
+    
+    func reveiveTransitDetailsNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.handleTransitDetails(notification:)), name: Notification.Name("TransitDetailsAvailable"), object: nil)
+    }
+    
+    func checkRefresh() {
+        if #available(iOS 10.0, *) {
+            let refreshControl = UIRefreshControl()
+            let title = NSLocalizedString("PullToRefresh", comment: "Pull to refresh")
+            refreshControl.attributedTitle = NSAttributedString(string: title)
+            refreshControl.addTarget(self,
+                                     action: #selector(refreshOptions(sender:)),
+                                     for: .valueChanged)
+            tableView.refreshControl = refreshControl
+        }
     }
     
     func fetchTransit() {
@@ -130,7 +134,6 @@ class SavedDirectionsViewController: UIViewController, UITableViewDelegate, UITa
                 let cellIndex = tableView.indexPathForSelectedRow?.row
                 let directions = list[cellIndex!]
                 destination.directionObject = directions
-                
             }
         }
     }
