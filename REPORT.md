@@ -10,7 +10,7 @@ De applicatie bestaat uit drie viewcontrollers:
 
 ### SavedDirectionViewContoller
 
-In deze viewcontroller staat de tabel die opgeslagen reizen weergeeft. De tabel bestaat uit een lijst met Directions objecten. Deze objecten bevatten reisdetails van de opgeslagen reizen. De objecten worden aangemaakt met behulp van de [Google Directions API](#google-directions-api) en [Core Location](#core-location) bij het uitlezen van [Core Data](#core-data).
+In deze viewcontroller staat de tabel die opgeslagen reizen weergeeft. De tabel bestaat uit een lijst met Directions objecten. Deze objecten bevatten reisdetails van de opgeslagen reizen. De objecten worden aangemaakt met behulp van de [Google Directions API](#google-directions-api) en [Core Location](#core-location) bij het uitlezen van [Core Data](#core-data). Het scherm kan herladen worden door de tabel naar bedenen te schuiven.
 
 #### Google Directions API
 Op basis van de opgegeven startlocatie, eindbestemming, manier van reizen en api key wordt een http verzoek verstuurd naar de Google Directions API. 
@@ -21,13 +21,13 @@ Voorbeeld request: *https://maps.googleapis.com/maps/api/directions/json?origin=
 Core location haalt de huidige locatie op van de gebruiker wanneer de app geladen wordt. Hiervoor moet de gebruiker eerst toestemming geven. Zonder deze toestemming kan de applicatie niet functioneren. 
 
 #### Core Data
-Core data is een systeem om data te organiseren binnen de applicatie. In deze applicatie wordt alleen de eindbestemming van de gebruiker opgeslagen in Core Data. 
+Core data is een systeem om data te organiseren binnen de applicatie. In deze applicatie wordt alleen de eindbestemming van de gebruiker opgeslagen in Core Data. Deze eindbestemming wordt opslagen in de vorm van een string.
 
 ### SearchViewController
 De gebruiker kan met de SearchViewController een reis creëeren middels het zoekvenster. Een reis wordt gecreëerd wanneer er op een eindbestemming wordt geklikt.
 
 #### Google Places API
-Deze api zorgt voor een autocomplete bij het zoeken naar een eindbestemming. Bij het invoeren van tekens geeft deze api een locatie suggestie terug.
+Deze api zorgt voor een autocomplete bij het zoeken naar een eindbestemming. Bij het invoeren van tekens geeft deze api een locatie suggestie terug in een tabelvorm. Voor het implementeren van deze API moest je eerst drie Framework installeren: Google Maps, GooglePlacePicker en GooglePlaces. Dit heb ik met behulp van de applicatie Cocoa Pods gedaan.
 
 #### Core Data
 In deze viewcontroller wordt Core Data gebruikt om de eindbestemming op te slaan wanneer een reis wordt gecreëert door de gebruiker. 
@@ -45,7 +45,7 @@ Ik denk dat het een goede keuze is geweest om het Geofence te laten zoals het nu
 
 Met meer tijd zou ik het Geofence werkend krijgen zodat het ook op de achtergrond uitgevoerd wordt. Ook zou ik meer reisdetails opslaan in het Directions object, omdat de gebruiker nu alleen de beginhalte kan zien. Hierdoor kan de gebruiker geen tussenstops/overstapplekken bekijken.
 
-Het ophalen van de huidige locatie duurt naar mijn mening te lang. Op het moment na de initializatie van het Core Location zit er een paar seconde tussen voordat de eerste functie in dit object automatisch wordt uitgevoerd. Ik heb niet kunnen achterhalen waarom dit zo lang duurt.
+Het ophalen van de huidige locatie duurt naar mijn mening te lang. Op het moment na de initializatie van het Core Location object zit een paar seconde tussen voordat de eerste functie in dit object automatisch wordt uitgevoerd. Ik heb niet kunnen achterhalen waarom dit zo lang duurt.
 
 ## Demo uitleg
 De standaard locatie staat ingesteld op het Science Park. Ik heb dit gedaan aan de hand van een .gpx file. Hierin kan je coördinaten van een locatie instellen. De standaard locatie is ingesteld in het target build schema.
