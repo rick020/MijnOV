@@ -21,7 +21,6 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         super.viewDidLoad()
         autocompleteController.delegate = self
         present(autocompleteController, animated: false, completion: nil)
-        
     }
         
     func saveInCoreData(destination: String) {
@@ -29,13 +28,11 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         let managedContext = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "Destination", in: managedContext)!
         let transit = NSManagedObject(entity: entity, insertInto: managedContext)
-    
         transit.setValue(destination, forKeyPath: "name")
         
         do {
             try managedContext.save()
             transitDB.append(transit)
-            print("succeed")
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }

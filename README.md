@@ -1,5 +1,9 @@
-# eindproject
+# MijnOV
 
+Naam: Rick Bruins
+Studentnummer: 10647368
+ 
+__Beschrijving__
 Studenten nemen dagelijks dezelfde route met het OV. Het is daarom onnodig om je eindbestemming telkens in te voeren in je reisplanner. In deze app kan je van te voren routes opslaan. Wanneer de app wordt geopend worden deze routes automatisch gepland op basis van je huidige locatie. Hierdoor zie je gelijk wanneer jouw trein/tram/metro/bus vertrekt. Dit kan je doen voor meerdere routes. Wanneer je in de buurt van een voorkeurs station/halte komt krijg je een push bericht met de vertrektijden.
 
 __Componenten__
@@ -9,4 +13,7 @@ __Componenten__
 * MapKit
 
 __Layout:__
-<p><img src=doc/wireframe.png>
+<img src=doc/SavedViewController.png width=25%>
+<img src=doc/SearchViewController.png width=25%>
+<img src=doc/Saved2ViewController.png width=25%>
+<img src=doc/RegionViewController.png width=25%>

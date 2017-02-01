@@ -23,10 +23,8 @@ class Directions {
 
     private func requestDirection() -> URLRequest{
         let key = "AIzaSyBxT6mhVJwxrUi6wKcfKr9nhTN5Kl7_X5A"
-        
         self.starting_point = self.starting_point.replacingOccurrences(of: " ", with: "+")
         self.starting_point = self.starting_point.replacingOccurrences(of: ",", with: "")
-
         let webUrl = URL(string: "https://maps.googleapis.com/maps/api/directions/json?origin=\(self.starting_point)&destination=\(self.destination)&mode=transit&key=\(key)")!
         var request = URLRequest(url: webUrl)
         request.httpMethod = "POST"

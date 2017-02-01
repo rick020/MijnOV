@@ -22,10 +22,13 @@ class SavedDirectionsViewController: UIViewController, UITableViewDelegate, UITa
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(self.handleTransitDetails(notification:)), name: Notification.Name("TransitDetailsAvailable"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.locationAvailable(notification:)), name: Notification.Name("LocationAvailable"), object: nil)
-        fetchTransit()
+        checkRefresh()        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         coreLocation = CoreLocation()
-        checkRefresh()
-        
+        fetchTransit()
     }
     @objc private func refreshOptions(sender: UIRefreshControl) {
         coreLocation = CoreLocation()
@@ -38,10 +41,9 @@ class SavedDirectionsViewController: UIViewController, UITableViewDelegate, UITa
     func createDirections() {
         list = []
         for trans in transitDB as [NSManagedObject] {
-            let destination = (trans.value(forKey: "name") as! String).replacingOccurrences(of: " ", with: "+")
-//            destination = destination.replacingOccurrences(of: " ", with: "+")
+            var destination = trans.value(forKey: "name") as! String
+            destination = destination.replacingOccurrences(of: " ", with: "+")
             let myDirection = Directions(starting_point: self.userInfo, destination:destination)
-            
             list.append(myDirection)
         }
         tableView.reloadData()

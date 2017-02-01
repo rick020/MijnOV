@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2530F9451E41ECBF0024080A /* SciencePark.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2530F9441E41ECBF0024080A /* SciencePark.gpx */; };
 		259CF3A71E37AF14003F6EF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 259CF3A51E37AF14003F6EF6 /* LaunchScreen.storyboard */; };
 		259CF3BB1E37AF38003F6EF6 /* CoreLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259CF3AE1E37AF38003F6EF6 /* CoreLocation.swift */; };
 		259CF3BC1E37AF38003F6EF6 /* Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259CF3AF1E37AF38003F6EF6 /* Directions.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		251F87841E3A359C00A3FDAD /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		2530F9441E41ECBF0024080A /* SciencePark.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SciencePark.gpx; sourceTree = "<group>"; };
 		259CF3961E37AF14003F6EF6 /* MijnOV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MijnOV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		259CF3A61E37AF14003F6EF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		259CF3AE1E37AF38003F6EF6 /* CoreLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreLocation.swift; path = ../CoreLocation.swift; sourceTree = "<group>"; };
@@ -82,9 +84,9 @@
 		259CF38D1E37AF14003F6EF6 = {
 			isa = PBXGroup;
 			children = (
+				259CF3CA1E37B227003F6EF6 /* doc */,
 				259CF3C91E37B227003F6EF6 /* PROCESS.md */,
 				25C5D6901E40CF1300AB9EA2 /* REPORT.md */,
-				259CF3CA1E37B227003F6EF6 /* doc */,
 				259CF3CB1E37B227003F6EF6 /* DESIGN.md */,
 				259CF3CC1E37B227003F6EF6 /* README.md */,
 				259CF3B51E37AF38003F6EF6 /* AppDelegate.swift */,
@@ -106,6 +108,7 @@
 		259CF3981E37AF14003F6EF6 /* MijnOV */ = {
 			isa = PBXGroup;
 			children = (
+				2530F9441E41ECBF0024080A /* SciencePark.gpx */,
 				259CF3D21E37F22D003F6EF6 /* Model */,
 				259CF3D11E37F213003F6EF6 /* Controllers */,
 				259CF3B31E37AF38003F6EF6 /* Info.plist */,
@@ -236,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2530F9451E41ECBF0024080A /* SciencePark.gpx in Resources */,
 				259CF3CE1E37B227003F6EF6 /* doc in Resources */,
 				259CF3C81E37AF55003F6EF6 /* Main.storyboard in Resources */,
 				259CF3A71E37AF14003F6EF6 /* LaunchScreen.storyboard in Resources */,
