@@ -33,11 +33,11 @@ Deze api zorgt voor een autocomplete bij het zoeken naar een eindbestemming. Bij
 In deze viewcontroller wordt Core Data gebruikt om de eindbestemming op te slaan wanneer een reis wordt gecreëert door de gebruiker. 
 
 ### RegionViewController
-Deze viewcontroller wordt geladen wanneer op een cel in de tabel geklikt wordt. De gebruiker krijgt een kaart(MKMapView) te zien met de huidige locatie en de locatie van de OV halte. Wanneer de gebruiker binnen bepaalde afstand van de halte komt verschijnt er een notificatie met de vertrektijd op het scherm. Dit kan allemaal gedaan worden met Core Location.
+Deze viewcontroller wordt geladen wanneer op een cel in de tabel geklikt wordt. Er wordt een object met alle reisdetails meegestuurd aan de hand van een segue. Op basis van de locatie van de begin halte, die wordt verkregen uit het object, wordt een Region object gecreëerd met een bepaalde radius. Deze Region wordt in een MKMapview geladen. MKMapview in een ingebakken kaart interface van Apple zelf. In de Mapview ziet de gebruiker naast de Region ook zijn eigen locatie. Wanneer de gebruiker binnen bepaalde afstand van de halte komt verschijnt er een notificatie met de reisdetails op het scherm. Deze details komen ook uit het object dat mee was gestuurd vanuit de SavedViewController.
 
 ## Challenges
 Terugkijkend naar het project heb ik (bijna) al mijn doelen bereikt. Ik heb leren werken met Core Location, Core Data en verscheidende Google API's. Alle functies die ik wilde implementeren werken naar behoren. Echter werkt het Geofence, die kijkt of je in de buurt bent van een halte, alleen wanneer je in de RegionViewController zit. Hierdoor heeft deze functie uiteindelijk geen toegevoegde waarde. Om deze functionaliteit wel een toegevoedgde waarde te geven moest ik mijn applicatie teveel ombouwen. Het zou mij veel tijd gaan kosten zonder zekerheid of het daadwerkelijk zou werken. In plaats daarvan heb ik het Autocomplete scherm van de Google Places API geïmplementeerd in de SearhViewController. 
-    
+
 Ook zijn mijn vaardigheden om in objecten te programmeren, naar mijn mening, verbeterd.
 
 ## Decisions
@@ -45,8 +45,10 @@ Ik denk dat het een goede keuze is geweest om het Geofence te laten zoals het nu
 
 Met meer tijd zou ik het Geofence werkend krijgen zodat het ook op de achtergrond uitgevoerd wordt. Ook zou ik meer reisdetails opslaan in het Directions object, omdat de gebruiker nu alleen de beginhalte kan zien. Hierdoor kan de gebruiker geen tussenstops/overstapplekken bekijken.
 
+Het ophalen van de huidige locatie duurt naar mijn mening te lang. Op het moment na de initializatie van het Core Location zit er een paar seconde tussen voordat de eerste functie in dit object automatisch wordt uitgevoerd. Ik heb niet kunnen achterhalen waarom dit zo lang duurt.
 
-
+## Demo uitleg
+De standaard locatie staat ingesteld op het Science Park. Ik heb dit gedaan aan de hand van een .gpx file. Hierin kan je coördinaten van een locatie instellen. De standaard locatie is ingesteld in het target build schema.
 
 
 

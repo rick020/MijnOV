@@ -8,9 +8,15 @@ Studenten nemen dagelijks dezelfde route met het OV. Het is daarom onnodig om je
 
 ###Componenten
 * Google Maps Directions API
+* Google Places API
 * Core Data
 * Core Location
 * MapKit
+
+###Vergelijkbare Apps
+De NS reisplanner kan ook voorgeplande reisinformatie weergeven. Echter biedt NS alleen maar reizen met de trein aan. Mijn app kan biedt reizen aan die mogelijk zijn met alle OV mogelijkheden.
+In de 9292 app kan je ook je een reis voor in de toekomst plannen en opslaan. Het gaat hier wel om een specifieke reis in de toekomst. De app kan niet de reisdetails van die reis op dat zelfde moment ophalen. Daarmee onderscheidt de MijnOV app zich.
+
 
 ###Layout
 <img src=doc/SavedViewController.PNG width=20%>
