@@ -13,7 +13,7 @@ __Componenten__
 * MapKit
 
 __Layout:__
-<img src=doc/SavedViewController.PNG width=25%>
-<img src=doc/SearchViewController.PNG width=25%>
-<img src=doc/SavedViewController2.PNG width=25%>
-<img src=doc/RegionViewController.PNG width=25%>
+<img src=doc/SavedViewController.PNG width=20%>
+<img src=doc/SearchViewController.PNG width=20%>
+<img src=doc/SavedViewController2.PNG width=20%>
+<img src=doc/RegionViewController.PNG width=20%>
