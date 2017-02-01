@@ -56,3 +56,9 @@ Route opslaan met Core Date en weergeven in tabel.
 
 # Dag 26/1
 * Het is gelukt om de Auto Complete te implementeren.
+
+# Dag 30/1
+* Die dag had ik een sollicitatiegesprek.
+
+# Dag 31/1
+* Overbodig code weggeschreven. Daarnaast ben ik er achter gekomen dat het laden van de huidige locatie erg lang duurt. Het gaat "fout" na het initializeren van het object. Het duurt ongeveer 8 seconde wanneer de functie binnen het object wordt aangeroepen. Morgen ga ik proberen dit op te lossen. Dit heeft mijn hoogste prioriteit aangezien de functie wel gewoon werkt. Het duurt gewoon iets langer.

@@ -22,8 +22,6 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Location is needed</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Location is needed</string>
 	<key>UILaunchStoryboardName</key>
