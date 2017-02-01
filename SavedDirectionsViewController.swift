@@ -38,8 +38,8 @@ class SavedDirectionsViewController: UIViewController, UITableViewDelegate, UITa
     func createDirections() {
         list = []
         for trans in transitDB as [NSManagedObject] {
-            var destination = trans.value(forKey: "name") as! String
-            destination = destination.replacingOccurrences(of: " ", with: "+")
+            let destination = (trans.value(forKey: "name") as! String).replacingOccurrences(of: " ", with: "+")
+//            destination = destination.replacingOccurrences(of: " ", with: "+")
             let myDirection = Directions(starting_point: self.userInfo, destination:destination)
             
             list.append(myDirection)
@@ -48,12 +48,10 @@ class SavedDirectionsViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     func handleTransitDetails(notification: Notification) {
-        print("transit details handled")
         tableView.reloadData()
     }
     
     func locationAvailable(notification: Notification) {
-        print("location available")
         self.userInfo = notification.object as! String
         title = self.userInfo
         createDirections()

@@ -67,7 +67,7 @@ class RegionViewController: UIViewController,MKMapViewDelegate, CLLocationManage
             }
         }
         else {
-            print("System can't track regions")
+            alert(title: "Error", message: "System can't track regions")
         }
     }
     
