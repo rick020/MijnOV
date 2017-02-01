@@ -48,9 +48,9 @@ Met meer tijd zou ik het Geofence werkend krijgen zodat het ook op de achtergron
 Het ophalen van de huidige locatie duurt naar mijn mening te lang. Op het moment na de initializatie van het Core Location object zit een paar seconde tussen voordat de eerste functie in dit object automatisch wordt uitgevoerd. Ik heb niet kunnen achterhalen waarom dit zo lang duurt.
 
 ## Demo uitleg
-De standaard locatie staat ingesteld op het Science Park. Ik heb dit gedaan aan de hand van een .gpx file. Hierin kan je coördinaten van een locatie instellen. De standaard locatie is ingesteld in het target build schema. Het implementeren van standaard bestemmingen is helaas niet gelukt, omdat dit niet makkelijk kan in Core Data. Ik had eerst een functie geschreven die een lijst van 2 bestemmingen automatisch in Core Data zetten. Deze functie werd aangeroepen in de SearchViewController. Het nadeel van deze implementatie is dat Core Data de hele tijd deze 2 bestemmingen toegevoegde wanneer het scherm geladen werd en niet eenmalig. 
+De standaard locatie staat ingesteld op het Science Park. Ik heb dit gedaan aan de hand van een .gpx file. Hierin kan je coördinaten van een locatie instellen. De standaard locatie is ingesteld in het target build schema. Het implementeren van standaard bestemmingen is helaas niet gelukt, omdat dit niet makkelijk kan in Core Data. Ik had eerst een functie geschreven die een lijst van 2 bestemmingen automatisch in Core Data zetten. Deze functie werd aangeroepen in de SearchViewController. Het nadeel van deze implementatie is dat Core Data de hele tijd deze 2 bestemmingen toegevoegde wanneer het scherm geladen werd en dus niet eenmalig. 
 
-Naar mijn mening zou ik teveel code erbij moeten schrijven om alleen de standaard bestemmingen erbij te laden.
+Naar mijn mening zou ik teveel code erbij moeten schrijven om alleen de standaard demo eindbestemmingen erbij te laden.
 
 
 
