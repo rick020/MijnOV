@@ -15,5 +15,5 @@ __Componenten__
 __Layout:__
 <img src=doc/SavedViewController.PNG width=25%>
 <img src=doc/SearchViewController.PNG width=25%>
-<img src=doc/Saved2ViewController.PNG width=25%>
+<img src=doc/SavedViewController2.PNG width=25%>
 <img src=doc/RegionViewController.PNG width=25%>
