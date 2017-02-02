@@ -34,7 +34,7 @@ Route opslaan met Core Date en weergeven in tabel.
 * Reizen kunnen verwijdert worden uit de tabel.
 * Actuele reisdata wordt in de tabel weergeven.
 * Meerdere reizen in tabel zorgen voor bugs. Helaas heb ik dit niet kunnen fixen, omdat er geen begeleiding was.
-<p><img src=doc/homescreen.PNG><img src=doc/search_view.PNG><img src=doc/routes_view.PNG>
+<p><img src=doc/homescreen.PNG width=20%><img src=doc/search_view.PNG width=20%><img src=doc/routes_view.PNG width=20%>
 
 # Dag 19/1
 
@@ -61,4 +61,10 @@ Route opslaan met Core Date en weergeven in tabel.
 * Die dag had ik een sollicitatiegesprek.
 
 # Dag 31/1
-* Overbodig code weggeschreven. Daarnaast ben ik er achter gekomen dat het laden van de huidige locatie erg lang duurt. Het gaat "fout" na het initializeren van het object. Het duurt ongeveer 8 seconde wanneer de functie binnen het object wordt aangeroepen. Morgen ga ik proberen dit op te lossen. Dit heeft mijn hoogste prioriteit aangezien de functie wel gewoon werkt. Het duurt gewoon iets langer.
+* Overbodig code weggeschreven. Daarnaast ben ik er achter gekomen dat het laden van de huidige locatie erg lang duurt. Het gaat "fout" na het initialiseren van het object. Het duurt ongeveer 8 seconde wanneer de functie binnen het object wordt aangeroepen. Morgen ga ik proberen dit op te lossen. Dit heeft mijn hoogste prioriteit aangezien de functie wel gewoon werkt. Het duurt gewoon iets langer.
+
+# Dag 1/2
+* Vandaag aan mijn report gewerkt en daarnaast is het mij ook gelukt om de bug van gisteren op te lossen. In de initializatie wordt nu een andere functie aangeroepen die de locatie ophaalt. 
+
+# Dag 2/2
+* License en Credits toegevoegd aan de README. Verder heb ik mijn Process Book en Report afgemaakt. Done!  
