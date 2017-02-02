@@ -1,5 +1,5 @@
 # MijnOV
-<div style="text-aling:center"><img src=http://www.best-masters.com/assets/img/logo_ecole/892.jpg width=70% align=center></div>
+<div style="text-aligN:center"><img src=http://www.best-masters.com/assets/img/logo_ecole/892.jpg width=50% align=center></div>
 **Naam**: Rick Bruins
 
 **Studentnummer**: 10647368
