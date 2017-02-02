@@ -39,7 +39,6 @@ In de 9292 app kan je ook je een reis voor in de toekomst plannen en opslaan. He
 * Het gebruik van een Geofence, [Eugene Trapeznikov](https://www.appcoda.com/geo-targeting-ios/)
 * Het gebruik van de huidige locatie, [The Swift Guy](https://www.youtube.com/watch?v=UyiuX8jULF4)
 * Het gebruik van Core Data voor opslag van de eindbestemming, [Ray Wenderlich](https://www.raywenderlich.com/145809/getting-started-core-data-tutorial)
-
 * In het bijzonder wil ik Julian Jansen bedanken voor al zijn hulp. 
 
 
