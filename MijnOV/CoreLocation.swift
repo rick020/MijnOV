@@ -17,6 +17,7 @@ class CoreLocation : NSObject, CLLocationManagerDelegate {
     override init() {
         super.init()
         self.locationManager.delegate = self
+        self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.startUpdatingLocation()
     }
