@@ -1,13 +1,10 @@
 # MijnOV
+<img src=http://www.best-masters.com/assets/img/logo_ecole/892.jpg width=20% align=center>
+*Naam*: Rick Bruins
 
-Naam: Rick Bruins
+*Studentnummer*: 10647368
 
-Studentnummer: 10647368
-
-Vak: Programmeerproject, Minor Programmeren 
-
-Universiteit van Amsterdam
-
+*Vak*: Programmeerproject, Minor Programmeren 
  
 ###Beschrijving
 Studenten nemen dagelijks dezelfde route met het OV. Het is daarom onnodig om je eindbestemming telkens in te voeren in je reisplanner. In deze app kan je van te voren routes opslaan. Wanneer de app wordt geopend worden deze routes automatisch gepland op basis van je huidige locatie. Hierdoor zie je gelijk wanneer jouw trein/tram/metro/bus vertrekt. Dit kan je doen voor meerdere routes. Wanneer je in de buurt van een voorkeurs station/halte komt krijg je een push bericht met de vertrektijden.
